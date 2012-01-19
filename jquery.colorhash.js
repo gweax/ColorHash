@@ -29,8 +29,11 @@ var actions = {
             return schemes[name];
         }
         
-        if (name in schemes && scheme === "delete") {
-            delete schemes[name];
+        if (scheme === "delete") {
+            // never delete the base scheme
+            if (name in schemes && name !== "base") {
+                delete schemes[name];
+            }
         }
         else {
             // a name which is the name of an action will break the plugin
