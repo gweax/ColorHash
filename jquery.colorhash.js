@@ -52,6 +52,11 @@ var actions = {
         return this.each(function () {
             var elem, backgroundColor, color;
             
+            // small security measure, don't show color for short passwords
+            if (this.nodeName === "INPUT" && this.type === "password" && this.value.length < 6) {
+                return;
+            }
+            
             elem = $(this);
             
             backgroundColor = actions.color.call(elem, name);
@@ -70,9 +75,11 @@ var actions = {
     },
     
     "color" : function (name) {
+        var scheme, hash;
+    
         // this is a jQuery object
-        var scheme = schemes[name] || schemes.base;
-        var hash = actions.hash.call(this);
+        scheme = schemes[name] || schemes.base;
+        hash = actions.hash.call(this);
         
         return "#" + scheme[hash % scheme.length];
     },
