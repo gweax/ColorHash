@@ -1,0 +1,10 @@
+ColorHash
+
+A jQuery plugin to set the background color of any element depending on its value or text.
+
+Usage:
+
+$("input").colorHash();
+$("p").colorHash();
+
+Sets the text color to black or white to contrast the background color.

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Colorhash</title>
+        <style>
+            input {
+                font-size: 2em;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <input type="text" autofocus>
+        
+        <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+        <script src="jquery.colorhash.js"></script>
+        <script>
+            $("input").on("keyup", function () {
+                $(this).colorHash();
+            });
+        </script>
+    
+    </body>
+</html>
