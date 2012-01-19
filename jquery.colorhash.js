@@ -1,12 +1,3 @@
-/* Next steps:
-
-add color scheme
-config color schemes
-
-*/
-
-
-
 (function ($) {
 
 var schemes = {
