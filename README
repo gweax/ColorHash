@@ -2,9 +2,42 @@ ColorHash
 
 A jQuery plugin to set the background color of any element depending on its value or text.
 
-Usage:
+Basic usage:
 
 $("input").colorHash();
 $("p").colorHash();
 
 Sets the text color to black or white to contrast the background color.
+
+
+
+Advanced usage:
+
+Get the color without setting it:
+
+    $("input").colorHash("color");
+
+
+Add a custom color scheme
+
+    $.fn.colorHash("scheme", "blackAndWhite", ["000000", "ffffff"]);
+    
+
+Set the color based on a custom color scheme:
+
+    $("input").colorHash("blackAndWhite");
+    
+
+Get the hash of an element's text or value:
+
+    $("input").colorHash("hash");
+    
+
+Get a color scheme:
+
+    $.fn.colorHash("scheme", "blackAndWhite");
+    
+    
+Delete a color scheme:
+
+    $.fn.colorHash("scheme", "blackAndWhite", "delete");
