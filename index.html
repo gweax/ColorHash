@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Colorhash by gweax</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Colorhash</h1>
+<p>Colorize elements depending on their content</p>
+        <p class="view"><a href="https://github.com/gweax/ColorHash">View the Project on GitHub <small>gweax/ColorHash</small></a></p>
+        <ul>
+          <li><a href="https://github.com/gweax/ColorHash/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/gweax/ColorHash/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/gweax/ColorHash">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>jquery.colorhash.js</h1>
+
+<p>A jQuery plugin to set the background color of any element depending on its value or text.</p>
+
+<h2>Basic usage:</h2>
+
+<pre><code>$("input").colorHash();
+$("p").colorHash();
+</code></pre>
+
+<p>Sets the text color to black or white to contrast the background color.</p>
+
+<h2>Advanced usage:</h2>
+
+<h3>Get the color without setting it:</h3>
+
+<pre><code>$("input").colorHash("color");
+</code></pre>
+
+<h3>Add a custom color scheme</h3>
+
+<pre><code>$.fn.colorHash("scheme", "blackAndWhite", ["000000", "ffffff"]);
+</code></pre>
+
+<h3>Set the color based on a custom color scheme:</h3>
+
+<pre><code>$("input").colorHash("blackAndWhite");
+</code></pre>
+
+<h3>Get the hash of an element's text or value:</h3>
+
+<pre><code>$("input").colorHash("hash");
+</code></pre>
+
+<h3>Get a color scheme:</h3>
+
+<pre><code>$.fn.colorHash("scheme", "blackAndWhite");
+</code></pre>
+
+<h3>Delete a color scheme:</h3>
+
+<pre><code>$.fn.colorHash("scheme", "blackAndWhite", "delete");
+</code></pre>
+
+<h1>ColorHash.js</h1>
+
+<p>A standalone version to get a color hash from a string.</p>
+
+<h2>Basic usage:</h2>
+
+<pre><code>ColorHash.getColor("Roses are red, violets are blue.");
+</code></pre>
+
+<h2>Advanced usage:</h2>
+
+<h3>Add a custom color scheme</h3>
+
+<pre><code>ColorHash.addScheme("blackAndWhite", ["000000", "ffffff"]);
+</code></pre>
+
+<h3>Get the color based on a custom color scheme:</h3>
+
+<pre><code>ColorHash.getColor("Most poems rhyme", "blackAndWhite");
+</code></pre>
+
+<h3>Get the hash of a string:</h3>
+
+<pre><code>ColorHash.getHash("This one doesn't.");
+</code></pre>
+
+<h3>Get a color scheme:</h3>
+
+<pre><code>ColorHash.getScheme("blackAndWhite");
+</code></pre>
+
+<h3>Delete a color scheme:</h3>
+
+<pre><code>ColorHash.deleteScheme("blackAndWhite");
+</code></pre>
+      </section>
+    </div>
+    <footer>
+      <p>Project maintained by <a href="https://github.com/gweax">gweax</a></p>
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+    </footer>
+    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+    
+  </body>
+</html>
