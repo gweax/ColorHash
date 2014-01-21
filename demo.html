@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>ColorHash Demo</title>
+
+        <link rel="stylesheet" href="stylesheets/styles.css">
+        <style>
+            legend {
+                font-size: 1.4em;
+                color: #222;
+            }
+
+            fieldset {
+                margin-bottom: 1em;
+            }
+
+            .demo {
+                font-size: 1.4em;
+                padding: 0.3em;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header>
+                <h1>Colorhash</h1>
+                <p>Colorize elements depending on their content</p>
+                <p class="view"><a href="https://github.com/gweax/ColorHash">View the Project on GitHub <small>gweax/ColorHash</small></a></p>
+            </header>
+            <section>
+                <h1>Demo</h1>
+
+                <fieldset>
+                    <legend>Basic</legend>
+                    <p>
+                        Just type in any text and see the color changed.
+                    </p>
+                    <input class="demo" type="text" placeholder="Type here...">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Passwords</legend>
+                    <p>
+                        The use of ColorHash on password fields can improve the usability. Since you cannot see the password
+                        entered, it's hard to detect typos. By setting the background color depending on the password typed
+                        in, you can easily notice if you typed something wrong, since the color is different from the one
+                        you are used to.
+                    </p>
+                    <input class="demo" type="password" placeholder="Type a password here...">
+                </fieldset>
+
+            </section>
+        </div>
+        <footer>
+            <p>Project maintained by <a href="https://github.com/gweax">gweax</a></p>
+            <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+        </footer>
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="javascripts/jquery.colorHash.js"></script>
+        <script>
+            $(".demo").on("keyup", function () {
+                $(this).colorHash();
+            });
+        </script>
+    </body>
+</html>
