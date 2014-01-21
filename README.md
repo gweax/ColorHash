@@ -2,6 +2,8 @@
 
 A jQuery plugin to set the background color of any element depending on its value or text.
 
+See a demo at http://gweax.github.io/ColorHash/demo.html
+
 Basic usage:
 
     $("input").colorHash();
